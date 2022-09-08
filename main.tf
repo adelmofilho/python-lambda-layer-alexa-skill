@@ -33,5 +33,5 @@ resource "aws_lambda_layer_version" "lambda_layer" {
   compatible_runtimes      = ["python3.7"]
   license_info             = "MIT"
   description              = "Python Lambda Layer with minimal packages for alex skills"
-  source_code_hash         = filebase64sha256("python37.zip")
+  source_code_hash         = filebase64sha256("/tmp/python37.zip")
 }
