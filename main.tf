@@ -35,3 +35,11 @@ resource "aws_lambda_layer_version" "lambda_layer" {
   description              = "Python Lambda Layer with minimal packages for alex skills"
   source_code_hash         = filebase64sha256("/tmp/python37.zip")
 }
+
+resource "aws_lambda_layer_version_permission" "lambda_layer" {
+  layer_name     = aws_lambda_layer_version.lambda_layer.layer_arn
+  version_number = aws_lambda_layer_version.lambda_layer.version
+  principal      = "*"
+  action         = "lambda:GetLayerVersion"
+  statement_id   = "alexa_skill_python_minimal"
+}
