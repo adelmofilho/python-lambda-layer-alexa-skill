@@ -27,7 +27,7 @@ provider "aws" {
 
 resource "aws_lambda_layer_version" "lambda_layer" {
   provider                 = aws.us_east_1
-  filename                 = "/artifacts/python37.zip"
+  filename                 = "/tmp/python37.zip"
   layer_name               = "alexa_skill_python_minimal"
   compatible_architectures = ["x86_64"]
   compatible_runtimes      = ["python3.7"]
