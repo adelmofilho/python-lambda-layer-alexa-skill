@@ -26,7 +26,7 @@ provider "aws" {
 }
 
 resource "aws_lambda_layer_version" "lambda_layer" {
-  provider                 = aws.west
+  provider                 = aws.us_east_1
   filename                 = "python37.zip"
   layer_name               = "alexa_skill_python_minimal"
   compatible_architectures = ["x86_64"]
