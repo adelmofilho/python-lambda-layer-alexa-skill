@@ -37,6 +37,7 @@ resource "aws_lambda_layer_version" "lambda_layer" {
 }
 
 resource "aws_lambda_layer_version_permission" "lambda_layer" {
+  provider       = aws.us_east_1
   layer_name     = aws_lambda_layer_version.lambda_layer.layer_arn
   version_number = aws_lambda_layer_version.lambda_layer.version
   principal      = "*"
