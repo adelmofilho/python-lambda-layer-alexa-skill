@@ -16,6 +16,7 @@ terraform {
 }
 
 module "lambda_layer_us_east_1" {
+  source = "./modules/layer"
   provider = aws.us_east_1
   for_each = var.python_version
   python_version = each.value
