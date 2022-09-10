@@ -15,16 +15,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "us-east-1"
-  alias  = "us_east_1"
-}
-
-provider "aws" {
-  region = "sa-east-1"
-  alias  = "sa_east_1"
-}
-
 resource "aws_lambda_layer_version" "lambda_layer" {
   provider                 = aws.us_east_1
   filename                 = "/tmp/python37.zip"

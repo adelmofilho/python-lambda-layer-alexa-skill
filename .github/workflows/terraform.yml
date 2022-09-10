@@ -14,7 +14,7 @@ permissions:
 jobs:
 
   python37:
-    name: "Python Layer"
+    name: "Python 3.7"
     runs-on: ubuntu-latest
     container: public.ecr.aws/sam/build-python3.7
     steps:
@@ -23,13 +23,49 @@ jobs:
 
       - name: Build Python 3.7 package
         run: |
-          pip install -r requirements.txt -t python/lib/python3.8/site-packages/
+          pip install -r requirements.txt -t python/lib/python3.7/site-packages/
           zip -r python37.zip python > /dev/null
 
       - uses: actions/upload-artifact@master
         with:
           name: python37
           path: ./python37.zip
+
+  python38:
+    name: "Python 3.8"
+    runs-on: ubuntu-latest
+    container: public.ecr.aws/sam/build-python3.8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build Python 3.8 package
+        run: |
+          pip install -r requirements.txt -t python/lib/python3.8/site-packages/
+          zip -r python38.zip python > /dev/null
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: python38
+          path: ./python38.zip
+
+  python39:
+    name: "Python 3.9"
+    runs-on: ubuntu-latest
+    container: public.ecr.aws/sam/build-python3.9
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build Python 3.9 package
+        run: |
+          pip install -r requirements.txt -t python/lib/python3.9/site-packages/
+          zip -r python39.zip python > /dev/null
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: python39
+          path: ./python39.zip
 
   terraform:
     name: 'Terraform'
