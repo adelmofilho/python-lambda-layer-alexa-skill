@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+      configuration_aliases = [ aws.region ]
+    }
+  }
+}
+
 resource "aws_lambda_layer_version" "lambda_layer" {
   filename                 = "/tmp/${var.python_version}.zip"
   layer_name               = var.layer_name

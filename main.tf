@@ -1,11 +1,11 @@
 # Configure Terraform SDK
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
+  # required_providers {
+  #   aws = {
+  #     source  = "hashicorp/aws"
+  #     version = "~> 4.0"
+  #   }
+  # }
   backend "remote" {
     organization = "shared"
     hostname     = "app.terraform.io"
@@ -17,9 +17,11 @@ terraform {
 
 module "lambda_layer_us_east_1" {
   source         = "./modules/layer"
-  provider       = aws.us_east_1
   for_each       = var.python_version
   python_version = each.value
+  providers = {
+    aws.region = aws.us_east_1
+  }
 }
 
 
