@@ -10,7 +10,7 @@ terraform {
 resource "aws_lambda_layer_version" "lambda_layer" {
   filename                 = "/tmp/${var.python_version}.zip"
   layer_name               = "${var.layer_name}_${replace(var.python_version, ".", "")}"
-  compatible_architectures = [var.compatible_architectures]
+  # compatible_architectures = [var.compatible_architectures]
   compatible_runtimes      = [var.python_version]
   license_info             = var.license_info
   description              = var.description

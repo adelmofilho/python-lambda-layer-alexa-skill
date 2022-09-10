@@ -12,10 +12,10 @@ variable "statement_id" {
   default = "alexa_skill_python_minimal"
 }
 
-variable "compatible_architectures" {
-  type    = string
-  default = "x86_64"
-}
+# variable "compatible_architectures" {
+#   type    = string
+#   default = "x86_64"
+# }
 
 variable "description" {
   type    = string
