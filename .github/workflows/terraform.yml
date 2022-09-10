@@ -69,7 +69,7 @@ jobs:
 
   terraform:
     name: 'Terraform'
-    needs: [python37]
+    needs: [python37, python38, python39]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -79,10 +79,20 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
+
     - uses: actions/checkout@master
+
     - uses: actions/download-artifact@master
       with:
         name: python37
+        path: /tmp
+    - uses: actions/download-artifact@master
+      with:
+        name: python38
+        path: /tmp
+    - uses: actions/download-artifact@master
+      with:
+        name: python39
         path: /tmp
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
