@@ -24,12 +24,12 @@ jobs:
       - name: Build Python 3.7 package
         run: |
           pip install -r requirements.txt -t python/lib/python3.7/site-packages/
-          zip -r python37.zip python > /dev/null
+          zip -r python3.7.zip python > /dev/null
 
       - uses: actions/upload-artifact@master
         with:
-          name: python37
-          path: ./python37.zip
+          name: python3.7
+          path: ./python3.7.zip
 
   python38:
     name: "Python 3.8"
@@ -42,12 +42,12 @@ jobs:
       - name: Build Python 3.8 package
         run: |
           pip install -r requirements.txt -t python/lib/python3.8/site-packages/
-          zip -r python38.zip python > /dev/null
+          zip -r python3.8.zip python > /dev/null
 
       - uses: actions/upload-artifact@master
         with:
-          name: python38
-          path: ./python38.zip
+          name: python3.8
+          path: ./python3.8.zip
 
   python39:
     name: "Python 3.9"
@@ -60,12 +60,12 @@ jobs:
       - name: Build Python 3.9 package
         run: |
           pip install -r requirements.txt -t python/lib/python3.9/site-packages/
-          zip -r python39.zip python > /dev/null
+          zip -r python3.9.zip python > /dev/null
 
       - uses: actions/upload-artifact@master
         with:
-          name: python39
-          path: ./python39.zip
+          name: python3.9
+          path: ./python3.9.zip
 
   terraform:
     name: 'Terraform'
@@ -84,15 +84,15 @@ jobs:
 
     - uses: actions/download-artifact@master
       with:
-        name: python37
+        name: python3.7
         path: /tmp
     - uses: actions/download-artifact@master
       with:
-        name: python38
+        name: python3.8
         path: /tmp
     - uses: actions/download-artifact@master
       with:
-        name: python39
+        name: python3.9
         path: /tmp
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
