@@ -11,6 +11,10 @@ This project makes available multiple lambda layers with core Python packages ne
 | us-east-1 |           |           |           |
 | sa-east-1 |           |           |           |
 
+## Background
+
+While I was studying how to create alexa skills using custom lambda functions, I came across the fact that lambda functions don't have the `ask-sdk-core` package installed by default. As I didn't find public lambda layers with the `ask-sdk-core` package I decided to create and make them available.
+
 ## References
 
 - [How do I create a Lambda layer using a simulated Lambda environment with Docker?](https://aws.amazon.com/pt/premiumsupport/knowledge-center/lambda-layer-simulated-docker/)
