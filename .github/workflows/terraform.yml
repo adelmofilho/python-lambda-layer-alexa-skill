@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - v*
+    branches: [ "main" ]
 
 env:
   AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
