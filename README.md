@@ -1,4 +1,6 @@
 # Python Lambda layer for Alexa skills
+[![Pipeline](https://github.com/triplebackslash/python-lambda-layer-alexa-skill/actions/workflows/pipeline.yml/badge.svg)](https://github.com/triplebackslash/python-lambda-layer-alexa-skill/actions/workflows/pipeline.yml)
+![](https://shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue)
 
 ## Overview
 

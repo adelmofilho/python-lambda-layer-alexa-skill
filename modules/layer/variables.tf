@@ -4,12 +4,12 @@ variable "python_version" {
 
 variable "layer_name" {
   type = string
-  default = "alexa_skill_python_minimal"
+  default = "layer_alexa_skill"
 }
 
 variable "statement_id" {
   type    = string
-  default = "alexa_skill_python_minimal"
+  default = "layer_alexa_skill"
 }
 
 # variable "compatible_architectures" {
