@@ -6,10 +6,21 @@
 
 This project makes available multiple lambda layers with core Python packages needed to run Alexa skills.
 
-| Region    | python3.7 | python3.8 | python3.9 |
-|-----------|-----------|-----------|-----------|
-| us-east-1 |           |           |           |
-| sa-east-1 |           |           |           |
+### sa-east-1
+
+| Python version | Arn                                                                      |
+|----------------|--------------------------------------------------------------------------|
+| python3.7      | arn:aws:lambda:sa-east-1:037635704544:layer:layer_alexa_skill_python37:1 |
+| python3.8      | arn:aws:lambda:sa-east-1:037635704544:layer:layer_alexa_skill_python38:1 |
+| python3.8      | arn:aws:lambda:sa-east-1:037635704544:layer:layer_alexa_skill_python39:1 |
+
+### us-east-1
+
+| Python version | Arn                                                                      |
+|----------------|--------------------------------------------------------------------------|
+| python3.7      | arn:aws:lambda:us-east-1:037635704544:layer:layer_alexa_skill_python37:1 |
+| python3.8      | arn:aws:lambda:us-east-1:037635704544:layer:layer_alexa_skill_python38:1 |
+| python3.8      | arn:aws:lambda:us-east-1:037635704544:layer:layer_alexa_skill_python39:1 |
 
 ## Background
 
