@@ -1,8 +1,9 @@
-name: 'Terraform'
+name: 'Python lambda layer publish'
 
 on:
   push:
-    branches: [ "main" ]
+    tags:
+      - v*
 
 env:
   AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}

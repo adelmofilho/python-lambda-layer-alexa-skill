@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project makes available multiple lambda layers with core Python packages need to run Alexa skills.
+This project makes available multiple lambda layers with core Python packages needed to run Alexa skills.
 
 | Region    | python3.7 | python3.8 | python3.9 |
 |-----------|-----------|-----------|-----------|

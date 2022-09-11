@@ -15,20 +15,20 @@ terraform {
   }
 }
 
-# module "lambda_layer_us_east_1" {
-#   source         = "./modules/layer"
-#   for_each       = var.python_version
-#   python_version = each.value
-#   providers = {
-#     aws = aws.us_east_1
-#   }
-# }
+module "lambda_layer_us_east_1" {
+  source         = "./modules/layer"
+  for_each       = var.python_version
+  python_version = each.value
+  providers = {
+    aws = aws.us_east_1
+  }
+}
 
-# module "lambda_layer_sa_east_1" {
-#   source         = "./modules/layer"
-#   for_each       = var.python_version
-#   python_version = each.value
-#   providers = {
-#     aws = aws.sa_east_1
-#   }
-# }
+module "lambda_layer_sa_east_1" {
+  source         = "./modules/layer"
+  for_each       = var.python_version
+  python_version = each.value
+  providers = {
+    aws = aws.sa_east_1
+  }
+}
